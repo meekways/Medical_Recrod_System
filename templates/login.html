@@ -1,0 +1,52 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-12">
+      <div class="jumbotron text-center">
+        <h2>Medical Record System</h2>
+        <p>Please select user account to signin</p>
+      </div>
+    </div>
+
+        <div class="container">
+            <h3 classs="form-signin-heading">Select Your User ID and Password</h3>
+            <form class="form-signin">
+                <label for="ID">Choose Your User ID</label>
+                <select name="User ID" id="User ID">
+                    <option value="Admin">Admin</option>
+                    <option value="Record-attendant">Record-attendant</option>
+                    <option value="Consultant">Consultant</option>
+                    <option value="Pharmacist">Pharmacist</option>
+                </select>
+                <br><br>
+                <div class="container">
+                    <label for="uname"><b>User ID</b></label>
+                    <input type="text" placeholder="Enter User-ID" name="user-id" required>
+                    <br><br>
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter User-Password" name="psw" required>
+                        
+                    <button type="submit">Login</button>
+                    <br>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                  </div>
+                  <br>
+                  <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                  </div>
+            </form>
+        </div>
+     </div>   
+    </div>
+  </div>
+</div>
+{% endblock %}
