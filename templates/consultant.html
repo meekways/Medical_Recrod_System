@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consultant page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="content">
+            <h3>Hi, <span>Doctor</span></h3>
+            <h3>welcome <span></span></h3>
+            <p>this is doctor</p>
+        </div>
+        <div class="form-container">
+            <form action="">
+                <h3>Doctor Form</h3>
+                <span class="details">Patient_id:</span>
+                    <input type="text" placeholder="Patient_id" required>
+                    <span class="details2">Doctor Name</span>
+                    <input type="text" placeholder="doctor name" required>
+                    <span class="comments">Doctor comments:</span>
+                    <textarea id = "test-conduct" rows="7" cols="55" placeholder="enter requirded test"></textarea>
+                    <div class="tests">
+                        <span class="test-conducted-1">Required Test:</span>
+                        <br>
+                        <textarea id = "test-conduct" rows="5" cols="55" placeholder="enter requirded test"></textarea>
+                        <div class="button">
+                        <input type="submit" value="submit">
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

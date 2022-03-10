@@ -2,49 +2,25 @@
 <html lang="en">
 <head>    
     <title>MRS</title>
-    <!--the image that will display in the title bar-->
-    <!-- <link rel="icon" type="image/icon" href="image/mrs.png"> -->
-    <!--this is the linking of style.css file-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
 </head>
 <body>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='img/nurs.png')}}">
+    </div>
     <div class="full-page">
         <div class="navbar">
             <a href="website.html">Medical Record Systems</a>
         </div>
         <nav>
             <ul id="MenuItems">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><button class="loginbtn" onclick="window.location.href='{{url_for('login')}}';" style="width: auto;">login</button>
-                  <button class="regbtn" onclick="window.location.href='{{url_for('registration')}}';" style="width: auto;">Register users</button</li>
+                <li><a href="{{ url_for('admin')}}">Admin</a></li>
+                <li><a href="{{ url_for('record')}}">Record Staff</a></li>
+                <li><a href="{{ url_for('consultant')}}">Consultant/Doctor</a></li>
+                <li><a href="{{ url_for('lab')}}">Lab Scientist</a></li>
+                <li><button class="loginbtn" onclick="window.location.href='{{url_for('login')}}';" style="width: auto;">login</button></li>
             </ul>
         </nav>
     </div>
-    <!-- <header>
-        <div class="wrapper">
-        <div class="logo">
-            <img src="image/mrs.png" alt="">
-        </div>
-
-        <div class="navi">
-        
-        </div> 
-
-        <div class="welcome-text">
-            <h1>Welcome To Our Medicals Records System <strong>(MRS)</strong></h1>
-        </div>
-        <div class="login-as">
-        <h3>Login as:</h3>
-        <ul class="login-area">
-            <li><a href="#">Admin</a></li>
-            <li><a href="#">Record Staff</a></li>
-            <li><a href="#">Consultant/Doctor</a></li>
-            <li><a href="#">Lab Attendance/pharmecy</a></li>
-        </ul>
-    </div>
-    </header> -->
 </body>
 </html>

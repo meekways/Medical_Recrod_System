@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab-form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="content">
+            <h3>Hi, <span>Laboratory</span></h3>
+            <h3>welcome <span></span></h3>
+            <p>this is the laboratory</p>
+        </div>
+        <div class="form-container">
+            <form action="#">
+                <h3>LABORATORY FORM</h3>
+                    <span class="details">Patient_id:</span>
+                    <input type="text" placeholder="Patient_id" required>
+                    <span class="details2">Name of Technician</span>
+                    <input type="text" placeholder="name of technician" required>
+                    <div class="tests">
+                    <span class="test-conducted-1">Test:</span>
+                    <br>
+                    <textarea id = "test-conduct" rows="7" cols="55" placeholder="enter test conducted"></textarea>
+                    <div class="result">
+                        <span class="test-conducted">Results:</span>
+                        <br>
+                        <textarea id = "contact-address" rows="5" cols="55" placeholder="enter test result..."></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="submit">
+                    </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block head %}
+<style>
+    body {
+
+        color: black;
+    }
+
+    form {
+        margin-top: 6%;
+    }
+
+    h2 {
+        text-align: center;
+        color: red;
+    }
+
+    .patient {
+        font-size: 20px;
+        word-spacing: 7px;
+        margin: 2% 10% 2% 10%;
+        line-height: 30px;
+        border-style: groove;
+        border-color: #6478b3;
+        border-width: 5px;
+        padding: 1%;
+    }
+
+    .relative {
+        font-size: 20px;
+        word-spacing: 7px;
+        margin: 2% 10% 2% 10%;
+        border-style: groove;
+        border-width: 5px;
+        border-color: #6478b3;
+        padding: 2%;
+    }
+
+    input {
+        height: 20px;
+        width: 15em;
+    }
+
+    #comment {
+        height: 7em;
+        width: 33em;
+    }
+
+    #response {
+        word-spacing: normal;
+    }
+
+    h1 {
+        text-align: center;
+    }
+</style>
+<h1>Welcome!</h1>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <form action="/patient_form" , method="post">
+
+        <h2>PATIENT REGISTRATION FORM</h2>
+        <div class="patient">
+
+            <label for="date"><i>Date</i></label>
+            <input type="text" , id="date" , name="date">
+
+            <label for="patient_id"><i>Patient_id:</i></label>
+            <input type="text" , name="patient_id" , id="patient_id">
+
+            <label for="Surname"><i>Surname</i></label>
+            <input type="text" , name="surname" , id="surname">
+            <br><br>
+            <label for="first_name">First Name</label>
+            <input type="text" , name="first_name" , id="first_name">
+
+            <label for="last_name">Last Name</label>
+            <input type="text" , name="last_name" , id="last_name">
+
+            <label for="tel">Tel: </label>
+            <input type="text" , name="tel" , id="tel">
+            <br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" , id="address" , name="address">
+
+            <label for="date_of_birth">Date of Birth</label>
+            <input type="text" , name="date_of_birth" , id="date_of_birth">
+
+            <label for="occupation">Occupation</label>
+            <input type="text" , name="occupation" , id="occupation">
+            <br><br>
+            <label for="consultant_allocated">Consultant Allocated:</label>
+            <input type="text" , name="consultant_allocated" , id="consultant_allocated">
+
+            <label for="emergency">Emergency?</label>
+            <input type="radio" , name="Yes" value="1">Yes
+            <input type="radio" name="no" value="1">No
+
+
+        </div>
+
+        <h2><i>Particulars of Relative</i></h2>
+        <div class="relative">
+            <br>
+            <label for="rel_name"><i>Relative's Name</i></label>
+            <input type="text" , name="name_of_relative" , id="name_of_relative">
+
+            <label for="contact_address"><i> Contact Address:</i></label>
+            <input type="text" , name="contact_address" , id="contact_address">
+
+            <label for="Tel"><i>Phone_number</i></label>
+            <input type="text" , name="phone_number" , id="phone_number">
+            <br>
+            <br>
+            <label for="rel">Relationship:</label>
+            <input type="text" name="relationship" , id="relationship">
+
+            <label for="comment">Comment(s):</label>
+            <input type="text" name="comment" id="comment">
+
+            <button type="submit" value="{{url_for('add_patient')}}"> Submit</button>
+        </div>
+    </form>
+
+
+</div>
+{% endblock %}
